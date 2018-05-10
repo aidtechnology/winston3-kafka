@@ -1,0 +1,30 @@
+{
+  "name": "winston3-kafka",
+  "version": "0.0.1",
+  "description": "Winston 3 transport for Kafka",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidtechnology/winston3-kafka.git"
+  },
+  "keywords": [
+    "winston",
+    "transport",
+    "kafka",
+    "log"
+  ],
+  "author": "Alejandro Vicente Grabovetsky <sasha@aid.technology>",
+  "license": "SEE LICENSE IN \"LICENSE\"",
+  "bugs": {
+    "url": "https://github.com/aidtechnology/winston3-kafka/issues"
+  },
+  "homepage": "https://github.com/aidtechnology/winston3-kafka#readme",
+  "dependencies": {
+    "kafka-node": "^2.6.1",
+    "lodash": "^4.17.10",
+    "winston": "^3.0.0-rc5"
+  }
+}
