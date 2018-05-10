@@ -21,6 +21,7 @@ module.exports = class Kafka extends Transport {
         this.topic = options.topic;
         this.level = options.level || 'info';
         this.meta = options.meta || {};
+        this.compression = options.compression || 0;  // Either 0, 1 (Gzip) or 2 (Snappy) 
         this.clientOptions = options.clientOptions || {};
         this.producerOptions = options.producerOptions || {};
         
@@ -43,7 +44,11 @@ module.exports = class Kafka extends Transport {
         if (_isConnected) {
             // Send the message from the info object
             var payloads = [
-                { topic: this.topic, messages: [info[MESSAGE]] }
+                {
+                    topic: self.topic,
+                    messages: [info[MESSAGE]],
+                    attributes: self.compression
+                }
             ];
     
             self.producer.send(payloads, function(err, data) {
