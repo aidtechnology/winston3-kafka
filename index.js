@@ -18,12 +18,13 @@ module.exports = class Kafka extends Transport {
     constructor(options) {
         super(options);
 
+        if (!options.topic) {
+            throw Error('You must explicitly set the Kafka topic');
+        }
         this.topic = options.topic;
-        this.level = options.level || 'info';
-        this.meta = options.meta || {};
-        this.compression = options.compression || 0;  // Either 0, 1 (Gzip) or 2 (Snappy) 
         this.clientOptions = options.clientOptions || {};
         this.producerOptions = options.producerOptions || {};
+        this.compression = options.compression || 0;  // Either 0, 1 (Gzip) or 2 (Snappy) 
         
         // Connect
         this.client = new kafka.KafkaClient(this.clientOptions);
