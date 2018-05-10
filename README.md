@@ -30,3 +30,10 @@ winston.add(new winston.transports.Kafka(options));
 - `clientOptions` - node-kafka KafkaClient options
 - `producerOptions` - node-kafka HighLevelProducer options
 - `compression` - Compression to use on messages sent to Kafka (0: none [default], 1: Gzip, 2: Snappy)
+
+# Aknowledgements
+
+This repository took inspiration from previous efforts to create a Winston transport for Kafka, namely:
+
+https://github.com/bigdatr/winston-kafka-transport/blob/master/index.js
+https://github.com/Avocarrot/winston-kafka/blob/master/index.js
