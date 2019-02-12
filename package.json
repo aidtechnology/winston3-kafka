@@ -24,7 +24,7 @@
   "homepage": "https://github.com/aidtechnology/winston3-kafka#readme",
   "dependencies": {
     "kafka-node": "^2.6.1",
-    "lodash": "^4.17.10",
-    "winston": "^3.0.0-rc5"
+    "lodash": "^4.17.11",
+    "winston": "^3.0.0"
   }
 }
