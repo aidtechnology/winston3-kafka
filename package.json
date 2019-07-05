@@ -4,7 +4,9 @@
   "description": "Winston 3 transport for Kafka",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
   "dependencies": {
     "kafka-node": "^2.6.1",
     "lodash": "^4.17.11",
-    "winston": "^3.0.0"
-  }
+    "winston": "^3.0.0",
+    "snyk": "^1.192.0"
+  },
+  "snyk": true
 }
